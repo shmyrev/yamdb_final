@@ -3,13 +3,13 @@ from rest_framework import routers
 
 from .views import (
     APIToken,
-    SignUp,
-    UserViewSet,
-    TitleViewSet,
     CategoryViewSet,
+    CommentViewSet,
     GenreViewSet,
     ReviewViewSet,
-    CommentViewSet
+    SignUp,
+    TitleViewSet,
+    UserViewSet
 )
 
 app_name = 'api'

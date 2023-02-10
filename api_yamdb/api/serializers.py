@@ -1,10 +1,10 @@
+from django.core.validators import RegexValidator
 from rest_framework import exceptions, serializers
 from rest_framework.generics import get_object_or_404
 from rest_framework.validators import UniqueValidator
-from django.core.validators import RegexValidator
 
-from users.models import User, ROLES
 from reviews.models import Category, Genre, Title, Review, Comment
+from users.models import User, ROLES
 
 
 class UserSerializer(serializers.ModelSerializer):

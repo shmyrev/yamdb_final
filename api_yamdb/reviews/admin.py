@@ -1,6 +1,30 @@
 from django.contrib import admin
 
-from .models import Title, Genre, Category, Review, Comment
+from .models import Category, Comment, Genre, Review, Title    
+
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'slug',
+    )
+    search_fields = ('name', 'slug',)
+
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('id', 'text', 'review', 'author', 'pub_date')
+
+
+class GenreAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'slug',
+    )
+    search_fields = ('name', 'slug',)
+
+
+class ReviewsAdmin(admin.ModelAdmin):
+    list_display = ('id', 'text', 'title', 'author', 'pub_date', 'score')
 
 
 class TitleAdmin(admin.ModelAdmin):
@@ -13,30 +37,6 @@ class TitleAdmin(admin.ModelAdmin):
     filter_horizontal = ('genre',)
     search_fields = ('name', 'year', 'genre', 'category',)
     empty_value_display = '-пусто-'
-
-
-class GenreAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'slug',
-    )
-    search_fields = ('name', 'slug',)
-
-
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'slug',
-    )
-    search_fields = ('name', 'slug',)
-
-
-class ReviewsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'text', 'title', 'author', 'pub_date', 'score')
-
-
-class CommentAdmin(admin.ModelAdmin):
-    list_display = ('id', 'text', 'review', 'author', 'pub_date')
 
 
 admin.site.register(Title, TitleAdmin)
