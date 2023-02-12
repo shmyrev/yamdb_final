@@ -58,6 +58,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
+            context: ./infra/
+            file: infra/docker-compose.yaml
             sudo docker pull shmyrev/yamdb_final:latest
             sudo docker-compose stop
             sudo docker-compose rm web
