@@ -59,6 +59,7 @@ jobs:
           context: ./infra/
           script: |
             pwd
+            ls
             cd ./infra/
             sudo docker pull shmyrev/yamdb_final:latest
             sudo docker-compose stop
