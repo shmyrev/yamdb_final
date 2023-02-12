@@ -59,7 +59,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           context: infra
           script: |
-            cd yamdb_final/
+            cd yamdb_final/infra/
             ls -lah
             sudo docker-compose stop
             sudo docker-compose rm web
