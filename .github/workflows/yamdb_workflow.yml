@@ -59,6 +59,8 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           context: infra
           script: |
+            cd yamdb_final/
+            ls -lah
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
