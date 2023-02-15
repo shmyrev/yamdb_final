@@ -31,9 +31,6 @@ class User(AbstractUser):
     bio = models.TextField('Биография', blank=True, null=True)
     role = models.CharField(
         'Роль пользователя', max_length=15, choices=ROLES, default=USER)
-    is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
-    date_joined = models.DateTimeField(default=timezone.now)
 
     @property
     def is_user(self):
