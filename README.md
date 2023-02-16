@@ -57,8 +57,7 @@ DokerHub:
 - SSH_KEY            ssh ключ, можно увидить  cat ~/.ssh/id_rsa  
 - PASSPHRASE         секретная фраза для ssh ключа  
 Создание .env файла:  
-- ALLOWED_HOSTS      имя или ip сервера  
-- DEBUG              указать режим запуска (True, False)  
+- ALLOWED_HOSTS      имя или ip сервера   
 - DB_ENGINE          указываем, что работаем с postgresql  
 - DB_NAME            имя базы данных  
 - POSTGRES_USER      логин для подключения к базе данных  
@@ -100,8 +99,6 @@ nano .env
 TOKEN=54321 # указать секретный ключ для разработчиков
 
 ALLOWED_HOSTS=0.0.0.0   # указать имя или ip сервера
-
-DEBUG=False # указать режим запуска (True, False)
 
 DB_ENGINE=django.db.backends.postgresql # указываем, что работаем с postgresql
 
@@ -166,14 +163,14 @@ docker-compose down -v
 Пример рабочего проекта на сервере можно посмотреть здесь:
 
 ```
-http://84.201.152.121/
+http://158.160.30.7/
 ```
 
 Дитальное описание и примеры работы API проекта представлены в 
 документации в формате ReDoc:
 
 ```
-http://84.201.152.121/redoc/
+http://158.160.30.7/redoc/
 ```
 
 Получение произведений:
