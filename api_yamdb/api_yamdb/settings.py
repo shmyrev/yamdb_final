@@ -16,8 +16,8 @@ else:
     DEBUG = True
 
 ALLOWED_HOSTS = [
-    os.getenv('ALLOWED_HOSTS', default='web'),
-    '158.160.1.66',
+    os.getenv('ALLOWED_HOSTS', default='127.0.0.1'),
+    '158.160.30.7',
     '127.0.0.1',
     'localhost',
     'web',
