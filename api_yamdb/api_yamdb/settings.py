@@ -10,16 +10,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('TOKEN', default='54321')
 
-if socket.gethostname() != 'localhost':
-    DEBUG = False
-else:
-    DEBUG = True
+DEBUG = os.getenv('DEBUG', default=False)
 
 ALLOWED_HOSTS = [
-    os.getenv('ALLOWED_HOSTS', default='*'),
-    '84.201.152.121',
+    os.getenv('ALLOWED_HOSTS', default='127.0.0.1'),
+    '158.160.1.66',
     'localhost',
     '127.0.0.1',
+    'web',
+    '*',
 ]
 
 
